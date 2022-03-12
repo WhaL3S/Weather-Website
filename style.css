@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family:'Roboto', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1491237596458-ccbf4462e884?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card {
+    padding: 2.5em;
+    border-radius: 30px;
+    background-color: #1F2833;
+    width: 100%;
+    max-width: 400px;
+    margin: 2em;
+    opacity: 0.9;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 1em;
+    border-radius: 18px;
+    padding: 10px 20px;
+    width: 70%;
+    border: none;
+    font-size: 20px;
+    color: #1F2833;
+    background-color: #E0E0E0;
+}
+
+input:focus {
+    outline-width: 0;
+    opacity: 0.8;
+}
+
+input:hover {
+    transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+button {
+    vertical-align: center;
+    height: 3em;
+    width: 3em;
+    padding-top: 0.3em;
+    border-radius: 50%;
+    border: none;
+    margin-left: 0.8em;
+    cursor: pointer;
+    background-color: #E0E0E0;
+}
+
+button:hover {
+    transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+center {
+    color: #E0E0E0;
+    font-size: 20px;
+}
+
+.status {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.weather-description { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 100px;
+    position: relative;
+  }
+  
+.weather.loading:after {
+    position: absolute;
+    visibility: visible;
+    content: "";
+    color: #E0E0E0;
+    top: 0;
+    left: 59%;
+    top: 90%;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #99c0d973;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
